@@ -93,10 +93,6 @@ func getUXBackendServerDeployment() *appsv1.Deployment {
 								corev1.ResourceCPU:    resource.MustParse("50m"),
 								corev1.ResourceMemory: resource.MustParse("128Mi"),
 							},
-							Limits: corev1.ResourceList{
-								corev1.ResourceCPU:    resource.MustParse("250m"),
-								corev1.ResourceMemory: resource.MustParse("512Mi"),
-							},
 						},
 						SecurityContext: &corev1.SecurityContext{
 							RunAsNonRoot:           ptr.To(true),
@@ -136,10 +132,6 @@ func getUXBackendServerDeployment() *appsv1.Deployment {
 							Requests: corev1.ResourceList{
 								corev1.ResourceCPU:    resource.MustParse("5m"),
 								corev1.ResourceMemory: resource.MustParse("50Mi"),
-							},
-							Limits: corev1.ResourceList{
-								corev1.ResourceCPU:    resource.MustParse("25m"),
-								corev1.ResourceMemory: resource.MustParse("256Mi"),
 							},
 						},
 						SecurityContext: &corev1.SecurityContext{

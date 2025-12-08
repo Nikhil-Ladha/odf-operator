@@ -66,12 +66,9 @@ spec:
           periodSeconds: 10
           timeoutSeconds: 90
         resources:
-          limits:
-            cpu: 200m
-            memory: 400Mi
           requests:
-            cpu: 200m
-            memory: 400Mi
+            cpu: 50m
+            memory: 50Mi
       serviceAccountName: controller-manager
       terminationGracePeriodSeconds: 10
       tolerations:
